@@ -9,7 +9,7 @@ namespace HelloCube.MainThread
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<RotationSpeed>();
+            state.RequireForUpdate<Execute.MainThread>();
         }
 
         [BurstCompile]
