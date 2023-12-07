@@ -1,7 +1,6 @@
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace HelloCube.JobEntity
 {
@@ -18,6 +17,7 @@ namespace HelloCube.JobEntity
         {
             var job = new RotationJob() { deltaTime = SystemAPI.Time.DeltaTime };
             job.Schedule();
+            // state.Dependency = job.Schedule(state.Dependency); 此处与 job.Schedule(); 等价
         }
     }
 
