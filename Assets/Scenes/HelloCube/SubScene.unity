@@ -155,8 +155,8 @@ MonoBehaviour:
   MainThread: 0
   IJobEntity: 0
   Aspects: 0
-  Prefabs: 1
-  IJobChunk: 0
+  Prefabs: 0
+  IJobChunk: 1
   Reparenting: 0
   EnableableComponents: 0
   GameObjectSync: 0

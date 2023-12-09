@@ -213,10 +213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainThread: 0
-  IJobEntity: 1
+  IJobEntity: 0
   Aspects: 0
   Prefabs: 1
-  IJobChunk: 0
+  IJobChunk: 1
   Reparenting: 0
   EnableableComponents: 0
   GameObjectSync: 0
