@@ -152,11 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e7d0f7193c9a344ad763382e76ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThread: 0
+  MainThread: 1
   IJobEntity: 0
   Aspects: 0
   Prefabs: 0
-  IJobChunk: 1
+  IJobChunk: 0
   Reparenting: 0
   EnableableComponents: 0
   GameObjectSync: 0
