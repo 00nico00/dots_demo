@@ -8,7 +8,7 @@ namespace HelloCube.Reparenting
 {
     public partial struct ReparentingSystem : ISystem
     {
-        private bool attched;
+        private bool attached;
         private float timer;
         private const float interval = 0.7f;
 
@@ -16,7 +16,7 @@ namespace HelloCube.Reparenting
         public void OnCreate(ref SystemState state)
         {
             timer = interval;
-            attched = true;
+            attached = false;
             state.RequireForUpdate<Execute.Reparenting>();
         }
 
@@ -34,7 +34,7 @@ namespace HelloCube.Reparenting
             var rotatorEntity = SystemAPI.GetSingletonEntity<RotationSpeed>();
             var ecb = new EntityCommandBuffer(Allocator.Temp);
 
-            if (attched)
+            if (attached)
             {
                 DynamicBuffer<Child> children = SystemAPI.GetBuffer<Child>(rotatorEntity);
                 for (int i = 0; i < children.Length; i++)
@@ -53,7 +53,7 @@ namespace HelloCube.Reparenting
             
             ecb.Playback(state.EntityManager);
 
-            attched = !attched;
+            attached = !attached;
         }
     }
 }
